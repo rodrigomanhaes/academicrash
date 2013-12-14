@@ -1,0 +1,4 @@
+= simple_form_for @aluno do |f|
+  = f.input :nome
+  = f.association :curso, label_method: :nome
+  .actions = f.submit 'Salvar'

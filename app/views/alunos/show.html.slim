@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Nome:
+  '
+  = @aluno.nome
+p
+  strong Matrícula:
+  '
+  = @aluno.matricula
+p
+  strong Curso:
+  '
+  = @aluno.curso.nome
+
+= link_to 'Edit', edit_aluno_path(@aluno)
+'|
+= link_to 'Back', alunos_path
