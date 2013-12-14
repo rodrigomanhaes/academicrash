@@ -1,0 +1,6 @@
+= simple_form_for @turma do |f|
+  = f.input :nome
+  = f.association :professor, label_method: :nome
+  = f.association :disciplina, label_method: :nome
+  = f.association :horarios, as: :check_boxes
+  = f.submit 'Salvar'

@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'simple_form'
 gem 'devise'
+gem 'devise-i18n'
 gem 'cancan'
 gem 'slim-rails'
 gem 'sidekiq'  # apt-get install redis-server

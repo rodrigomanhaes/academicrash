@@ -1,6 +1,9 @@
 Academicrash::Application.routes.draw do
+  devise_for :usuarios
   resources :alunos
   resources :turmas, only: [:new, :create, :show]
+
+  root 'alunos#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
