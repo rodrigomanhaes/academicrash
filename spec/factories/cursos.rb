@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :curso do
-    nome "MyString"
-    codigo "MyString"
-    semestres 1
+    nome 'Agricultura Celeste'
+    codigo 'AGC-1234'
+    semestres 11
   end
 end

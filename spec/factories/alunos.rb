@@ -3,7 +3,6 @@
 FactoryGirl.define do
   factory :aluno do
     nome "MyString"
-    matricula "MyString"
-    curso nil
+    curso
   end
 end

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'matricular aluno no curso' do
   scenario 'matrícula com sucesso' do
-    Curso.create!(nome: 'Culinária Ucraniana')
+    create(:curso, nome: 'Culinária Ucraniana')
     visit new_aluno_path
     fill_in 'Nome', with: 'Yukihiro'
     select 'Culinária Ucraniana', from: 'Curso'
