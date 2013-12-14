@@ -1,0 +1,6 @@
+h1 Plano de estudos
+p Aluno: #{@plano_de_estudos.aluno.nome}
+p Período: #{@plano_de_estudos.periodo}
+ul
+  - @plano_de_estudos.turmas.each do |turma|
+    li = turma

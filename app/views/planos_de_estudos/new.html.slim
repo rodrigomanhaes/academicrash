@@ -1,0 +1,8 @@
+= form_tag aluno_planos_de_estudos_path(@aluno), method: 'post' do
+  = label_tag :periodo, 'Período'
+  = text_field_tag :periodo
+  br
+  - Turma.all.each do |turma|
+    = check_box_tag 'turma_ids[]', turma.id, false, id: dom_id(turma)
+    = label_tag dom_id(turma), turma.to_s
+  = submit_tag 'Salvar'

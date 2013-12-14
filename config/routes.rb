@@ -1,6 +1,8 @@
 Academicrash::Application.routes.draw do
   devise_for :usuarios
-  resources :alunos
+  resources :alunos do
+    resources :planos_de_estudos, only: [:new, :create, :show]
+  end
   resources :turmas, only: [:new, :create, :show]
 
   root 'alunos#index'

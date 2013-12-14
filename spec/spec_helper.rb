@@ -48,3 +48,4 @@ RSpec.configure do |config|
     login_as(create(:usuario))
   end
 end
+

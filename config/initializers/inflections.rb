@@ -6,6 +6,8 @@
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.plural /or$/i, 'ores'
   inflect.singular /ores$/i, 'or'
+  inflect.irregular 'PlanoDeEstudos', 'PlanosDeEstudos'
+  inflect.irregular 'plano_de_estudos', 'planos_de_estudos'
 #   inflect.plural /^(ox)$/i, '\1en'
 #   inflect.singular /^(ox)en/i, '\1'
 #   inflect.irregular 'person', 'people'
