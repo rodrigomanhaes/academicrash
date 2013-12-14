@@ -3,6 +3,28 @@
   = text_field_tag :periodo
   br
   - Turma.all.each do |turma|
-    = check_box_tag 'turma_ids[]', turma.id, false, id: dom_id(turma)
+    = check_box_tag 'turma_ids[]', turma.id, false, id: dom_id(turma), class: 'turma_check', 'data-tableinfo' => turma_data(turma)
     = label_tag dom_id(turma), turma.to_s
+
+  table#plano
+    thead
+      tr
+        th
+        th Seg
+        th Ter
+        th Qua
+        th Qui
+        th Sex
+    tbody
+      - %w(08:00 10:00 14:00 16:00).each do |hora|
+        tr
+          td = hora
+          td
+          td
+          td
+          td
+          td
+
+
+
   = submit_tag 'Salvar'

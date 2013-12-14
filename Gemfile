@@ -29,4 +29,5 @@ group :development, :test do
   gem 'launchy'
   gem 'timecop'
   gem 'pry-rails'
+  gem 'toothbrush', git: 'https://github.com/rodrigomanhaes/toothbrush.git'
 end
