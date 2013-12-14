@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131214134856) do
+ActiveRecord::Schema.define(version: 20131214165805) do
 
   create_table "alunos", force: true do |t|
     t.string   "nome"
@@ -30,5 +30,44 @@ ActiveRecord::Schema.define(version: 20131214134856) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "disciplinas", force: true do |t|
+    t.string   "nome"
+    t.string   "codigo"
+    t.integer  "curso_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "disciplinas", ["curso_id"], name: "index_disciplinas_on_curso_id"
+
+  create_table "horarios", force: true do |t|
+    t.integer  "dia"
+    t.string   "hora"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "horarios_turmas", id: false, force: true do |t|
+    t.integer "turma_id",   null: false
+    t.integer "horario_id", null: false
+  end
+
+  create_table "professores", force: true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "turmas", force: true do |t|
+    t.integer  "professor_id"
+    t.integer  "disciplina_id"
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "turmas", ["disciplina_id"], name: "index_turmas_on_disciplina_id"
+  add_index "turmas", ["professor_id"], name: "index_turmas_on_professor_id"
 
 end
